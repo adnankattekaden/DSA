@@ -16,16 +16,24 @@ import sys
 #
 
 def validSubSequence(arr, sequence):
-    # FUNCTION_BODY_COMMENT
-    print(arr)
-    pass
+    seqIdx = 0
+    for value in arr:
+        if seqIdx == len(sequence):
+            break
+
+        
+        if sequence[seqIdx] == value:
+            seqIdx += 1
+
+    
+    return seqIdx == len(sequence)
 
 if __name__ == '__main__':
     
 
     arr = [2,4,5,6,7,9,3,1,8,10,4,6,9,8]
 
-    sequence = [2,4,6,8,10]
+    sequence = [5,10,22,3]
 
     check = validSubSequence(arr, sequence)
 
